@@ -16,18 +16,17 @@
 body {
     font-family: 'League Spartan', sans-serif;
     font-weight: 400;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     color: var(--primary-color-magenta);
-    margin-inline: 10rem;
-    height: 100vh;
-    align-content: center;
-    row-gap: 2rem;
+    margin: 5rem 1rem;
+    text-align: center;
+
 }
 
 h1 {
     font-weight: 700;
-    font-size: 4rem;
+    line-height: .85;
+    font-size: 3rem;
+    margin-inline: 1rem;
 }
 
 h2 {
@@ -37,16 +36,13 @@ h2 {
 
 /* ------------------------------------------------- */
 /* heading */
-.heading {
-    padding-right: 8rem;
-}
 
 .heading p {
     line-height: 1.25;
-    font-size: 1.1rem;
-    margin-top: 1rem;
     font-weight: 500;
     color: var(--neutral-color-magenta);
+    font-size: 1.4rem;
+    margin-block: 2rem;
 }
 
 /* ------------------------------------------------- */
@@ -54,74 +50,43 @@ h2 {
 
 .rating {
     display: grid;
-    height: 14rem;
     align-items: center;
     margin-top: 2.5rem;
-    width: 30rem;
     font-weight: 700;
-}
-
-.eachRating:nth-child(2) {
-    position: relative;
-    left: 2rem;
-}
-
-.eachRating:last-child {
-    position: relative;
-    left: 4rem;
 }
 
 .eachRating {
     background-color: var(--neutral-color-light-magenta);
-    display: grid;
-    grid-template-columns: repeat(5, 1.5rem) 1fr;
-    height: 3rem;
-    align-items: center;
-    padding-inline: 2rem;
+    padding: 1rem 2rem;
+    margin-block: 0.5rem;
     border-radius: 8px;
 }
 
-.eachRating * {
-    padding-right: .5rem;
+.eachRating img {
+    padding: 0 0.25rem 0.75rem;
     display: inline;
 }
 
 .eachRating p {
     padding-inline: 1rem;
-    display: inline;
+    display: block;
 }
 
 /* ------------------------------------------------- */
 /* allreviews */
-.allReviews {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.review:nth-child(2) {
-    position: relative;
-    top: 1rem;
-}
-
-.review:nth-child(3) {
-    position: relative;
-    top: 2rem;
-}
 
 .review {
     background-color: var(--primary-color-magenta);
     color: var(--neatrul-color-White);
     height: 12rem;
-    width: 18rem;
+    margin-block: 1rem;
     padding: 1rem 2rem;
     display: grid;
     grid-template-columns: 3rem 1fr;
     grid-template-rows: 1.3rem 1.5rem 1fr;
     border-radius: 9px;
     align-items: stretch;
+    justify-items: start;
     padding-top: 2rem;
     column-gap: 0.75rem;
 }
@@ -138,15 +103,151 @@ h2 {
 }
 
 .remarks {
+    text-align: left;
     grid-column: span 2;
-    margin-top: 2rem;
-    line-height: 1.25;
+    margin-top: 1.75rem;
+    line-height: 1.5;
     color: var(--neutral-color-light-magenta);
 }
 
 .attribution {
-    position: absolute;
-    bottom: 13px;
     text-align: center;
-    margin-left: 27vw;
+}
+
+/* laptop screen */
+@media screen and (min-width: 1440px) {
+
+    body {
+        background-image: url('data:image/svg+xml,<svg width="1085" height="673" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="100%" y1="69.237%" x2="9.399%" y2="32.159%" id="a"><stop stop-color="%238A4389" stop-opacity="0" offset="0%"/><stop stop-color="%23512051" offset="100%"/><stop stop-color="%23512051" offset="100%"/><stop stop-color="%23512051" offset="100%"/></linearGradient></defs><path d="M355 800c74.356-153.934 215.022-251.268 422-292 310.466-61.099 192.94-122.724 345.47-245.025C1224.157 181.442 1330 136.116 1440 127v673H355z" transform="translate(-355 -127)" fill="url(%23a)" fill-rule="evenodd" opacity=".05"/></svg>');
+        display: grid;
+        margin: 0;
+        margin-inline: 10rem;
+        grid-template-columns: 1fr 1fr;
+        color: var(--primary-color-magenta);
+        margin-inline: 10rem;
+        height: 100vh;
+        align-content: center;
+        row-gap: 1rem;
+        align-items: center;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-inline: 0;
+        line-height: 1;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    /* ------------------------------------------------- */
+    /* heading */
+    .heading {
+        padding-right: 8rem;
+    }
+
+    .heading p {
+        line-height: 1.25;
+        font-size: 1.1rem;
+        margin-block: 1rem 0;
+    }
+
+    /* ------------------------------------------------- */
+    /* rating */
+
+    .rating {
+        height: 14rem;
+        width: 30rem;
+    }
+
+    .eachRating:nth-child(2) {
+        position: relative;
+        left: 2rem;
+    }
+
+    .eachRating:last-child {
+        position: relative;
+        left: 4rem;
+    }
+
+    .eachRating {
+        display: grid;
+        grid-template-columns: repeat(5, 1.5rem) 1fr;
+        height: 3rem;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .eachRating img {
+        padding: 0;
+        padding-right: .5rem;
+    }
+
+    .eachRating p {
+        padding-inline: 1rem;
+        display: inline;
+    }
+
+    /* ------------------------------------------------- */
+    /* allreviews */
+    .allReviews {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .review:nth-child(2) {
+        position: relative;
+        top: 1rem;
+    }
+
+    .review:nth-child(3) {
+        position: relative;
+        top: 2rem;
+    }
+
+    .review {
+        background-color: var(--primary-color-magenta);
+        color: var(--neatrul-color-White);
+        height: 12rem;
+        width: 18rem;
+        padding: 1rem 2rem;
+        display: grid;
+        grid-template-columns: 3rem 1fr;
+        grid-template-rows: 1.3rem 1.5rem 1fr;
+        border-radius: 9px;
+        align-items: stretch;
+        padding-top: 2rem;
+        column-gap: 0.75rem;
+    }
+
+    .review img {
+        border-radius: 3rem;
+        width: 2.5rem;
+        grid-row: span 2;
+    }
+
+    .buyerType {
+        grid-column-start: 2;
+        color: var(--primary-color-pink);
+    }
+
+    .remarks {
+        grid-column: span 2;
+        margin-top: 2rem;
+        line-height: 1.25;
+        color: var(--neutral-color-light-magenta);
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 13px;
+        text-align: center;
+        margin-left: 27vw;
+    }
 }
